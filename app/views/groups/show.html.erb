@@ -17,11 +17,13 @@
 	 	<tr>
 	 	<% @posts.each do |post|%>
 	 		<td><%=post.content %></td>
+	 		<% if current_user && post.editable_by?(current_user) %>
 	 		<td>
 	 		<%=link_to '編輯' , edit_group_post_path(post.group_id , post),  :class => "btn btn-default btn-xs" %>
 			<%=link_to '刪除' , group_post_path(post.group_id , post) ,:class => "btn btn-default btn-xs ",:method => :delete,
                            data: { confirm: "你確定要刪除?" } %>
 	 		</td>
+	 		 <% end %> 
 	 		<tr>
 	 	<% end %>
 	 </tbody>
