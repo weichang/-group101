@@ -1,7 +1,26 @@
 <div class ="col-md-12">
 	<div class="group">
+		<%=link_to '新增文章', new_group_post_path(@group) , :class => "btn btn-warning pull-right" %>
+	</div>	
+	<div class="group">	
 		<%=link_to '修改' , edit_group_path(@group) ,:class => 'btn btn-primary pull-right' %>
 	</div>
 	<h2> <%= @group.title %> </h2>
   	<p> <%= @group.description %> </p> 
 </div>
+<table class="table">
+	<thead>
+		<th>文章</th>
+		<th colsapn="2"></th>
+	</thead>
+	 <tbody>
+	 	<% @posts.each do |post|%>
+	 		<td><%=post.content %></td>
+	 		<td>
+	 		<%=link_to '編輯' , edit_group_post_path(post.group_id , post),  :class => "btn btn-default btn-xs" %>
+			<%=link_to '刪除' , group_post_path(post.group_id , post) ,:class => "btn btn-default btn-xs ",:method => :delete,
+                           data: { confirm: "你確定要刪除?" } %>
+	 		</td>
+	 	<% end %>
+	 </tbody>
+</table>
