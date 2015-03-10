@@ -14,6 +14,7 @@
 		<th colsapn="2"></th>
 	</thead>
 	 <tbody>
+	 	<tr>
 	 	<% @posts.each do |post|%>
 	 		<td><%=post.content %></td>
 	 		<td>
@@ -21,6 +22,7 @@
 			<%=link_to '刪除' , group_post_path(post.group_id , post) ,:class => "btn btn-default btn-xs ",:method => :delete,
                            data: { confirm: "你確定要刪除?" } %>
 	 		</td>
+	 		<tr>
 	 	<% end %>
 	 </tbody>
 </table>
