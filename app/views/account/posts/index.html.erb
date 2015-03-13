@@ -16,7 +16,7 @@
       <% @posts.each do |post| %>
         <tr>
           <td> <%= post.content %> </td> 
-          <td> <%= Group.find_by(:id => post.group_id).title %> </td> 
+          <td> <%= get_group_title(post.group_id) %> </td> 
           <td> <%= post.updated_at %> </td> 
           <td> <%= link_to('修改', 
                            edit_group_post_path(post.group_id, post), 

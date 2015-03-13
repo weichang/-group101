@@ -40,3 +40,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'bootstrap-sass'
 gem "simple_form"
 gem "devise"
+
+gem "settingslogic" #密鑰隱藏功能
+
+gem "omniauth"
+gem "omniauth-facebook" 
+gem "auto-facebook", "0.42"
