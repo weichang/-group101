@@ -46,3 +46,7 @@ gem "settingslogic" #密鑰隱藏功能
 gem "omniauth"
 gem "omniauth-facebook" 
 gem "auto-facebook", "0.42"
+
+#上傳功能
+gem 'carrierwave'
+gem 'mini_magick'

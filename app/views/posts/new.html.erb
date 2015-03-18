@@ -1,9 +1,10 @@
 <h1 class ="text-center">新增文章</h1>
 <div class ="col-md-4 col-md-offset-4" >
 	<%= simple_form_for [@group , @post]  do |f| %>
-
-		<%=f.input :content , :input_html => { :class => "form-control" } %>
-
+		
+		<%=f.input :image , :as => :file, label: '圖片上傳', :input_html => { :class => "form-control" } %>
+		<%=f.input :content ,label: '文章內容', placeholder: '文章內容' ,:input_html => { :class => "form-control" } %>
+		
 
 	<hr>
 	 <div class="form-actions">

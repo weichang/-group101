@@ -9,3 +9,5 @@
 3 使用者功能與應用
 
 4 新增facebok登入功能
+
+5 新增上傳圖片功能 (gem 'carrierwave')
