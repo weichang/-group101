@@ -3,7 +3,7 @@
 	<%= simple_form_for [@group , @post]  do |f| %>
 		
 		<%=f.input :image , :as => :file, label: '圖片上傳', :input_html => { :class => "form-control" } %>
-		<%=f.input :content ,label: '文章內容', placeholder: '文章內容' ,:input_html => { :class => "form-control" } %>
+		<%=f.input :content ,:as => :ckeditor ,label: '文章內容', placeholder: '文章內容' ,:input_html => { :class => "form-control" ,:ckeditor => {:toolbar => 'Full'} } %>
 		
 
 	<hr>

@@ -8,6 +8,11 @@
 
 3 使用者功能與應用
 
-4 新增facebok登入功能
+4 新增-facebok登入功能
 
-5 新增上傳圖片功能 (gem 'carrierwave')
+5 新增-上傳圖片功能 
+ . (gem 'carrierwave')
+
+6 新增-編輯器Ckeditor 
+ . (gem 'ckeditor')
+ . (rails generate ckeditor:install --orm=active_record --backend=carrierwave)

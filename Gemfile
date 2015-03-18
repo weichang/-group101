@@ -50,3 +50,6 @@ gem "auto-facebook", "0.42"
 #上傳功能
 gem 'carrierwave'
 gem 'mini_magick'
+
+#編輯器Ckeditor
+gem 'ckeditor'
